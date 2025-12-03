@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kontakt – Autoservizi Andreolli</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="/CSS/1-variables.css">
+<link rel="stylesheet" href="/CSS/2-reset.css">
+<link rel="stylesheet" href="/CSS/3-base.css">
+<link rel="stylesheet" href="/CSS/4-layout.css">
+<link rel="stylesheet" href="/CSS/5-components.css">
+<link rel="stylesheet" href="/CSS/6-style.css">
+<link rel="stylesheet" href="/CSS/6-contattaci.css">
+
+<!-- Favicon -->
+    <link rel="icon" href="/PNG/favicon-32px.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/PNG/favicon-48px.png" sizes="48x48" type="image/png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/PNG/favicon-180px.png">
+    <link rel="mask-icon" href="/SVG/logo ridotto-Autoservizi-Andreolli.svg" color="#000000">
+</head>
+
+<body>
+
+<div id="header-placeholder"></div>
+
+<main class="contatti-page">
+
+<section class="contatti-intro">
+    <h1>Kontakt</h1>
+    <p>Wir stehen für Informationen, Anfragen und individuelle Angebote zur Verfügung.</p>
+</section>
+
+<section class="contatti-content">
+
+<div class="contatti-form-wrapper">
+
+    <a href="tel:0039328653748" class="btn-chiamaci">
+        <img src="/PNG/Phone.png" class="icona-telefono" alt="Telefon Icon"> Rufen Sie uns an!
+    </a>
+
+    <p class="form-intro">Oder füllen Sie das Formular aus und teilen Sie uns mit, wie wir Ihnen helfen können.<br>Wir melden uns so schnell wie möglich bei Ihnen.</p>
+
+    <form id="contactForm" action="https://formspree.io/f/xpwvrnlk" method="POST">
+
+        <div class="form-group">
+            <label for="nome">Vorname*</label>
+            <input type="text" id="nome" name="nome" required>
+        </div>
+
+        <div class="form-group">
+            <label for="cognome">Nachname*</label>
+            <input type="text" id="cognome" name="cognome" required>
+        </div>
+
+        <div class="form-group">
+            <label for="email">E-Mail*</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="form-group">
+            <label for="telefono">Telefonnummer*</label>
+            <input type="tel" id="telefono" name="telefono">
+        </div>
+
+        <div class="form-group">
+            <label for="messaggio">Nachricht*</label>
+            <textarea id="messaggio" name="messaggio" rows="6" required></textarea>
+        </div>
+
+        <button type="submit" class="btn-primary btn-submit">Senden</button>
+    </form>
+
+    <div id="successMessage" class="success-message" role="status" aria-live="polite">
+        <p>✓ Vielen Dank! Ihre Nachricht wurde erfolgreich gesendet.<br>Wir melden uns in Kürze bei Ihnen.</p>
+    </div>
+
+</div>
+
+<div class="contatti-info">
+
+    <div class="info-item">
+        <p class="info-label">Telefon
+        </p>
+        <div class="info-line">
+            <p>Gaia:</p>
+            <a href="tel:00393451214877" class="info-value">+39 3451214877</a>
+        </div>
+        <div class="info-line">
+            <p>Paolo:</p>
+            <a href="tel:00393486004246" class="info-value">+39 3486004246</a>
+        </div>
+    </div>
+
+    <div class="info-item">
+        <p class="info-label">E-Mail</p>
+        <a href="mailto:info@andreolli.it" class="info-value">info@andreolli.it</a>
+    </div>
+
+    <div class="info-item">
+        <p class="info-label">Adresse</p>
+        <a href="https://www.google.com/maps/search/?api=1&query=Via+II+Maggio+7,+Brentonico,+TN"
+           target="_blank"
+           class="info-value">
+            Via II Maggio 7, Brentonico, TN
+        </a>
+    </div>
+
+</div>
+
+</section>
+
+</main>
+
+<div id="footer-placeholder"></div>
+
+<script src="/js/template.js"></script>
+<script src="/js/contact-form.js"></script>
+
+</body>
+</html>

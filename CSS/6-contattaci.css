@@ -1,0 +1,239 @@
+/* ============================================
+   PAGINA CONTATTI
+============================================ */
+
+/* SEZIONE INTRO */
+.contatti-intro {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--spacing-md) var(--spacing-sm);
+    text-align: left;
+}
+
+.contatti-intro h1 {
+    font-size: var(--font-size-2xl);
+    font-weight: 700;
+    margin-bottom: var(--spacing-xs);
+}
+
+.contatti-intro p {
+    font-size: var(--font-size-base);
+    line-height: 1.8;
+}
+
+/* SEZIONE CONTENUTO */
+.contatti-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--spacing-xs) var(--spacing-sm) var(--spacing-lg);
+}
+
+/* BOTTONE CHIAMACI (solo mobile) */
+.btn-chiamaci {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-xs);
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    padding: var(--spacing-sm) var(--spacing-lg);
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+    border-radius: 16px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    margin: 0 auto var(--spacing-lg);
+    width: fit-content;
+}
+
+.btn-chiamaci:hover {
+    background-color: var(--color-primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(66, 164, 178, 0.3);
+}
+
+.btn-chiamaci span {
+    font-size: 1.2rem;
+}
+
+.icona-telefono {
+    width: 32px;  /* Regola la dimensione come preferisci */
+    height: 32px;
+    vertical-align: middle;  /* Allinea con il testo */
+    margin-right: 4px;  /* Spazio tra icona e testo */
+}
+
+/* INTRO FORM */
+.form-intro {
+    font-size: var(--font-size-base);
+    line-height: 1.8;
+    margin-bottom: var(--spacing-lg);
+}
+
+/* FORM STYLES */
+.form-group {
+    margin-bottom: var(--spacing-md);
+}
+
+.form-group label {
+    display: block;
+    font-size: var(--font-size-xs);
+    font-weight: 700;
+    margin-bottom: var(--spacing-xs);
+    color: var(--color-text);
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: var(--spacing-sm);
+    font-family: 'Quicksand', sans-serif;
+    font-size: var(--font-size-base);
+    border: 2px solid var(--color-black);
+    border-radius: 16px;
+    transition: all 0.3s ease;
+    background-color: var(--color-white);
+}
+
+.form-group textarea {
+    border-radius: 16px;
+    resize: vertical;
+    min-height: 120px;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(66, 164, 178, 0.1);
+}
+
+/* BOTTONE INVIA */
+.btn-submit {
+    width: auto;
+    padding: 1rem 2rem;
+    margin-top: var(--spacing-lg);
+    display: block;
+    margin-left: auto;
+    margin-right: 0;
+}
+
+/* MESSAGGIO DI SUCCESSO */
+.success-message {
+    background-color: #d4edda;
+    border: 2px solid #28a745;
+    border-radius: 16px;
+    padding: var(--spacing-lg);
+    margin-top: var(--spacing-lg);
+    text-align: center;
+    display: none !important; /* Nascosto di default - important per forzare */
+}
+
+.success-message.show {
+    display: block !important; /* Visibile quando ha classe 'show' */
+}
+
+.success-message p {
+    font-size: var(--font-size-base);
+    color: #155724;
+    line-height: 1.8;
+    margin: 0;
+}
+
+/* INFO CONTATTI (nascosta su mobile) */
+.contatti-info {
+    display: none;
+}
+
+/* ============================================
+   MEDIA QUERIES - DESKTOP (48rem / 768px)
+============================================ */
+@media (min-width: 48rem) {
+    
+    /* Intro più spaziosa su desktop */
+    .contatti-intro {
+        padding: var(--spacing-lg) 2rem;
+    }
+    
+    .contatti-intro h1 {
+        font-size: var(--font-size-3xl);
+        margin-bottom: var(--spacing-sm);
+    }
+    
+    .contatti-intro p {
+        font-size: var(--font-size-lg);
+    }
+
+    .form-intro {
+    display: none;    
+    }
+    
+    /* Layout a 2 colonne */
+    .contatti-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: var(--spacing-2xl);
+        padding: var(--spacing-lg) 2rem var(--spacing-2xl);
+    }
+    
+    /* Nascondi bottone chiamaci su desktop */
+    .btn-chiamaci {
+        display: none;
+    }
+    
+    /* Form wrapper */
+    .contatti-form-wrapper {
+        padding-right: var(--spacing-lg);
+    }
+    
+    /* Bottone invia desktop */
+    .btn-submit {
+        padding: 1rem 2rem;
+        margin-left: auto;
+        margin-right: 0;
+    }
+    
+    /* INFO CONTATTI - visibile su desktop */
+    .contatti-info {
+     display: flex; 
+     flex-direction: column; 
+     justify-content: flex-start; 
+     padding-top: 2rem; /* Allinea con il form */ 
+     gap: var(--spacing-lg);
+     padding-left: 10rem;
+    }
+    
+    .info-item {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .info-line {
+       display: flex;
+       align-items: center;
+       gap: 8px;
+    }
+
+    .info-line p {
+      font-size: var(--font-size-base);
+      font-weight: 600;
+    }
+
+    
+    .info-label {
+        font-size: var(--font-size-xs);
+        font-weight: 700;
+        color: var(--color-text);
+    }
+    
+    .info-value {
+        font-size: var(--font-size-lg);
+        color: var(--color-text);
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+    
+    .info-value:hover {
+        color: var(--color-primary-dark);
+    }
+}

@@ -1,0 +1,142 @@
+/* ============================================
+   PAGINA LA NOSTRA STORIA
+============================================ */
+
+/* SEZIONE INTRO */
+.storia-intro {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--spacing-md) var(--spacing-sm) var(--spacing-xs);
+    text-align: left;
+}
+
+.storia-intro h1 {
+    font-size: var(--font-size-2xl);
+    font-weight: 700;
+    margin-bottom: var(--spacing-xs);
+}
+
+.storia-intro .subtitle {
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+    margin-bottom: var(--spacing-sm);
+    color: var(--color-text);
+}
+
+.storia-intro p {
+    font-size: var(--font-size-base);
+    line-height: 1.8;
+}
+
+/* SEZIONE TIMELINE */
+.storia-timeline {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--spacing-xs) var(--spacing-sm) var(--spacing-lg);
+}
+
+/* BLOCCO SINGOLO STORIA */
+.story-block {
+    margin-bottom: var(--spacing-sm);
+}
+
+.story-block:last-child {
+    margin-bottom: 0;
+}
+
+/* IMMAGINE STORIA */
+.story-image {
+    margin-bottom: var(--spacing-sm);
+}
+
+.story-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+}
+
+/* CONTENUTO STORIA */
+.story-content p {
+    font-size: var(--font-size-base);
+    line-height: 1.8;
+    margin-bottom: var(--spacing-sm);
+}
+
+.story-content p:last-child {
+    margin-bottom: var(--spacing-sm);
+}
+
+/* SOTTOTITOLO EVIDENZIATO */
+.story-subtitle {
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+    color: var(--color-text);
+    margin-bottom: var(--spacing-sm);
+}
+
+/* ============================================
+   MEDIA QUERIES - DESKTOP (48rem / 768px)
+============================================ */
+@media (min-width: 48rem) {
+    
+    /* Intro più spaziosa su desktop */
+    .storia-intro {
+        padding: var(--spacing-lg) 2rem;
+    }
+    
+    .storia-intro h1 {
+        font-size: var(--font-size-3xl);
+        margin-bottom: var(--spacing-sm);
+    }
+    
+    .storia-intro .subtitle {
+        font-size: var(--font-size-xl);
+    }
+    
+    .storia-intro p {
+        font-size: var(--font-size-lg);
+    }
+    
+    /* Timeline padding desktop */
+    .storia-timeline {
+        padding: 0 2rem var(--spacing-2xl);
+    }
+    
+    /* Layout grid 2 colonne su desktop */
+    .story-block {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: var(--spacing-xl);
+        align-items: center;
+        margin-bottom: var(--spacing-lg);
+    }
+    
+    /* Layout standard: immagine SX, testo DX */
+    .story-block .story-image {
+        order: 1;
+        margin-bottom: 0;
+    }
+    
+    .story-block .story-content {
+        order: 2;
+    }
+    
+    /* Layout invertito: testo SX, immagine DX */
+    .story-block.reverse .story-image {
+        order: 2;
+    }
+    
+    .story-block.reverse .story-content {
+        order: 1;
+    }
+    
+    /* Testi più grandi su desktop */
+    .story-content p {
+        font-size: var(--font-size-lg);
+    }
+    
+    .story-subtitle {
+        font-size: var(--font-size-xl);
+    }
+}
