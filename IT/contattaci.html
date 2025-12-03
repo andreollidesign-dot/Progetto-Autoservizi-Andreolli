@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contatti - Autoservizi Andreolli</title>
+    
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Fogli di stile -->
+    <link rel="stylesheet" href="/CSS/1-variables.css">
+    <link rel="stylesheet" href="/CSS/2-reset.css">
+    <link rel="stylesheet" href="/CSS/3-base.css">
+    <link rel="stylesheet" href="/CSS/4-layout.css">
+    <link rel="stylesheet" href="/CSS/5-components.css">
+    <link rel="stylesheet" href="/CSS/6-style.css">
+    <link rel="stylesheet" href="/CSS/6-contattaci.css">
+
+    <!-- Favicon -->
+    <link rel="icon" href="/PNG/favicon-32px.png" sizes="32x32">
+    <link rel="icon" href="/PNG/favicon-48px.png" sizes="48x48">
+    <link rel="apple-touch-icon" href="/PNG/favicon-180px.png">
+    <link rel="mask-icon" href="/SVG/logo ridotto-Autoservizi-Andreolli.svg" color="#000000">
+</head>
+<body>
+
+    <!-- HEADER (caricato automaticamente) -->
+    <div id="header-placeholder"></div>
+
+    <main class="contatti-page">
+        
+        <!-- INTRO -->
+        <section class="contatti-intro">
+            <h1>Contattaci</h1>
+            <p>Siamo a tua disposizione per informazioni, richieste e preventivi personalizzati.</p>
+        </section>
+
+        <!-- CONTENUTO -->
+        <section class="contatti-content">
+            
+            <!-- FORM -->
+            <div class="contatti-form-wrapper">
+                
+            <!-- Tasto mobile -->
+             <a href="tel:0039328653748" class="btn-chiamaci"><img src="/PNG/Phone.png" alt="Icona telefono" class="icona-telefono"> Chiamaci!
+             </a>
+
+                <p class="form-intro">Oppure compila il form e raccontaci in cosa possiamo aiutarti!<br>Ti ricontatteremo il prima possibile!</p>
+
+                <form id="contactForm" action="https://formspree.io/f/xpwvrnlk" method="POST">
+                    
+                    <div class="form-group">
+                        <label for="nome">Nome*</label>
+                        <input type="text" id="nome" name="nome" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="cognome">Cognome*</label>
+                        <input type="text" id="cognome" name="cognome" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email*</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="telefono">Numero di telefono*</label>
+                        <input type="tel" id="telefono" name="telefono">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="messaggio">Messaggio*</label>
+                        <textarea id="messaggio" name="messaggio" rows="6" required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-primary btn-submit">Invia</button>
+                </form>
+
+                <!-- Messaggio successo -->
+                <div id="successMessage" class="success-message" role="status" aria-live="polite">
+                    <p>✓ Grazie! Il tuo messaggio è stato inviato con successo.<br>Ti ricontatteremo al più presto.</p>
+                </div>
+            </div>
+
+            <!-- INFO -->
+            <div class="contatti-info">
+             <div class="info-item">
+             <p class="info-label">Telefono</p>
+                 <div class="info-line">
+                   <p>Gaia:</p>
+                   <a href="tel:00393451214877" class="info-value">0039 3451214877</a>
+                 </div>
+                 <div class="info-line">
+                   <p>Paolo:</p>
+                   <a href="tel:00393486004246" class="info-value">0039 3486004246</a>
+                 </div>
+             </div>
+
+                <div class="info-item">
+                    <p class="info-label">Email</p>
+                    <a href="mailto:info@andreolli.it" class="info-value">info@andreolli.it</a>
+                </div>
+
+                <div class="info-item">
+                    <p class="info-label">Indirizzo</p>
+                    <a href="https://www.google.com/maps/search/?api=1&query=Via+II+Maggio+7,+Brentonico,+TN" 
+                       target="_blank" rel="noopener noreferrer" 
+                       class="info-value">
+                       Via II Maggio n° 7, Brentonico, TN
+                    </a>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Script -->
+    <script src="/js/template.js"></script>
+    <script src="/js/contact-form.js"></script>
+
+</body>
+</html>
